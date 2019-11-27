@@ -1,6 +1,20 @@
-import React from 'react'
+import React, { Component } from "react";
 
+class Letter extends Component {
+  constructor() {
+    super();
+  }
+  selectLetter= () =>{
+  this.props.selectLetter(this.props.nletters)
+}
+  render() {
+    return (
+      <span>
+        <span>{this.props.letter}</span>
+        <span className={this.props.className}onClick={this.selectLetter}>{this.props.nletters}</span>
+      </span>
+    );
+  }
+}
 
-const Letter = () => <div>a</div>
-
-export default Letter
+export default Letter;
